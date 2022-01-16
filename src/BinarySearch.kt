@@ -1,7 +1,7 @@
 /**
  * https://leetcode-cn.com/problems/binary-search
  */
-class Solution {
+class BinarySearch {
 
     companion object {
         const val NOT_EXIST_CASE = -1
