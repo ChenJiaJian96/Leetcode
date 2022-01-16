@@ -1,12 +1,6 @@
 /**
  * https://leetcode-cn.com/problems/first-bad-version/
  */
-fun main() {
-    val helper = FirstBadVersion()
-    helper.badVersion = 1702766719
-    print(helper.firstBadVersion(2126753390))
-}
-
 class FirstBadVersion : VersionControl() {
 
     override fun firstBadVersion(n: Int): Int {
