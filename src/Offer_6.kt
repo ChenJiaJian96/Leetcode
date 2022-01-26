@@ -1,3 +1,5 @@
+import bean.ListNode
+
 /**
  * https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
  * 从尾到头打印链表
@@ -21,10 +23,6 @@ class ReverseLinkedList {
             node = node?.next
         }
         return nums
-    }
-
-    data class ListNode(val `val`: Int) {
-        var next: ListNode? = null
     }
 }
 
