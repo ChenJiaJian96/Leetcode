@@ -7,21 +7,21 @@ import kotlin.collections.ArrayList
  */
 class CQueue {
 
-    val coldStack = LinkedList<Int>() // 冷缓存（逆序，读出时需要转到热缓存）
-    val hotStack = LinkedList<Int>() // 热缓存
+    private val coldStack = LinkedList<Int>() // 冷缓存（逆序，读出时需要转到热缓存）
+    private val hotStack = LinkedList<Int>() // 热缓存
 
-    fun appendTail(value: Int) {
+    private fun appendTail(value: Int) {
         coldStack.add(value)
     }
 
-    fun deleteHead(): Int {
+    private fun deleteHead(): Int {
         if (hotStack.isEmpty()) {
-            if (coldStack.isEmpty()) return -1;
+            if (coldStack.isEmpty()) return -1
             while (!coldStack.isEmpty()) {
-                hotStack.add(coldStack.pop());
+                hotStack.add(coldStack.pop())
             }
-            return hotStack.pop();
-        } else return hotStack.pop();
+            return hotStack.pop()
+        } else return hotStack.pop()
     }
 
     fun operate(op: ArrayList<String>, num: IntArray): ArrayList<String> {

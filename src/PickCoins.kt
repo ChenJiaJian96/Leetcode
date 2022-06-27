@@ -13,9 +13,7 @@ class PickCoins {
             // 要找最少的，初始化值为最大值
             minCoins[target] = Int.MAX_VALUE
             // 开始
-            for (coinIndex in 0 until coins.size) {
-                // 挑一个硬币
-                val coin = coins[coinIndex]
+            for (coin in coins) { // 挑一个硬币
                 // 条件判断
                 // 1.首先这枚硬币一定是小于目标值的，不然就没有意义了；
                 // 2.动态规划：看下选择这枚硬币是否更优解：指的是减去这枚硬币的数额的数量 + 1 < 当前 target 的选择

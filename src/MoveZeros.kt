@@ -9,10 +9,9 @@ class MoveZeros {
      */
     fun moveZeroes(nums: IntArray) {
         var nonZeroNum = 0
-        for (i in 0 until nums.size) {
-            val currentNum = nums[i]
-            if (currentNum != 0) {
-                nums[nonZeroNum] = currentNum
+        for (element in nums) {
+            if (element != 0) {
+                nums[nonZeroNum] = element
                 nonZeroNum++
             }
         }

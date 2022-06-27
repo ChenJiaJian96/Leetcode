@@ -13,7 +13,7 @@ class StockMaxProfit {
 
             maxPriceArray[lastDay] = currentProfit + lastDayMaxProfit
         }
-        return maxPriceArray.max() ?: 0
+        return maxPriceArray.maxOrNull() ?: 0
     }
 
     /**

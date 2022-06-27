@@ -2,6 +2,7 @@ import kotlin.math.max
 
 /**
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+ * 滑动窗口，滑动过程中不断判断下一个字母是否在当前字符串即可；
  */
 class LongestSubString {
 

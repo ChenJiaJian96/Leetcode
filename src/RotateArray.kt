@@ -7,6 +7,8 @@ class RotateArray {
      * 思路：就是计算有多少个数字从后面放到前面即可。
      * 分界线前后分别翻转，最后整体翻转
      * 翻转函数可以在 reverse 的基础上进行改造
+     *
+     * @param k 数组向右轮转[k]]个位置
      */
     fun rotate(nums: IntArray, k: Int) {
         val needRotateNum = k % nums.size
