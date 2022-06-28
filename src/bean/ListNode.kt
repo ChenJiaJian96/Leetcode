@@ -1,7 +1,8 @@
 package bean
 
-data class ListNode(val `val`: Int) {
-    var next: ListNode? = null
+data class ListNode(
+    @JvmField val `val`: Int,
+    @JvmField var next: ListNode? = null) {
 
     fun valueList(): ArrayList<Int> {
         val data = arrayListOf(`val`)
@@ -12,4 +13,10 @@ data class ListNode(val `val`: Int) {
         }
         return data
     }
+}
+
+fun ListNode?.equalsTo(other: ListNode?): Boolean {
+    if (this == null && other == null) return true
+    if (this == null || other == null) return false
+    return this.`val` == other.`val` && this.next.equalsTo(other.next)
 }
