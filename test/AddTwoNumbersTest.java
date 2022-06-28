@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class AddTwoNumbersTest {
 
-    AddTwoNumbers config = new AddTwoNumbers();
+    private final AddTwoNumbers config = new AddTwoNumbers();
 
     // 输入：l1 = [0], l2 = [0]
     // 输出：[0]
