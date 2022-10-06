@@ -43,5 +43,6 @@ class BinarySearch {
             target < intervalNum -> binarySearch(nums, leftRange.first, leftRange.second, target)
             else -> binarySearch(nums, rightRange.first, rightRange.second, target)
         }
+
     }
 }

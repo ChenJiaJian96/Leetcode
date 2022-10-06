@@ -27,6 +27,10 @@ class ReverseLinkedListTest {
         }
 
         val resultHead = helper.reverseList(head)
-        assertTrue(intArrayOf(2, 3, 1).contentEquals(resultHead?.valueList()?.toIntArray() ?: intArrayOf(0)))
+        assertTrue(
+            intArrayOf(2, 3, 1).contentEquals(
+                resultHead?.valueList()?.toIntArray() ?: intArrayOf(0)
+            )
+        )
     }
 }

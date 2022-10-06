@@ -2,7 +2,8 @@ package bean
 
 data class ListNode(
     @JvmField val `val`: Int,
-    @JvmField var next: ListNode? = null) {
+    @JvmField var next: ListNode? = null
+) {
 
     fun valueList(): ArrayList<Int> {
         val data = arrayListOf(`val`)
