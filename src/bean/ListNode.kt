@@ -21,3 +21,5 @@ fun ListNode?.equalsTo(other: ListNode?): Boolean {
     if (this == null || other == null) return false
     return this.`val` == other.`val` && this.next.equalsTo(other.next)
 }
+
+fun ListNode?.optIntArray(): IntArray = this?.valueList()?.toIntArray() ?: IntArray(0)

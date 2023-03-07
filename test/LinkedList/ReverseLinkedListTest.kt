@@ -1,4 +1,5 @@
 import bean.ListNode
+import bean.optIntArray
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -14,23 +15,11 @@ class ReverseLinkedListTest {
             }
         }
 
-        val result = helper.reversePrint(head)
-        assertTrue(intArrayOf(2, 3, 1).contentEquals(result))
-    }
-
-    @Test
-    fun test_reverse_list_node() {
-        val head = ListNode(`val` = 1).also { firstNode ->
-            firstNode.next = ListNode(`val` = 3).also { secondNode ->
-                secondNode.next = ListNode(`val` = 2)
-            }
-        }
-
-        val resultHead = helper.reverseList(head)
-        assertTrue(
-            intArrayOf(2, 3, 1).contentEquals(
-                resultHead?.valueList()?.toIntArray() ?: intArrayOf(0)
-            )
-        )
+        val result1 = helper.reversePrint(head)
+        val result2 = helper.reverseList(head)
+        val result3 = helper.reverse(head)
+        assertTrue(intArrayOf(2, 3, 1).contentEquals(result1))
+        assertTrue(intArrayOf(2, 3, 1).contentEquals(result2.optIntArray()))
+        assertTrue(intArrayOf(2, 3, 1).contentEquals(result3.optIntArray()))
     }
 }
